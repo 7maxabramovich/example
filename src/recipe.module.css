@@ -4,7 +4,6 @@
   margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background: white;
   width: 30%;
@@ -17,6 +16,7 @@
 .ingredient {
   width: 88%;
   padding-inline-end: 10px;
+  display: none;
 }
 .image {
   border-radius: 5px;

@@ -21,6 +21,13 @@ const App = () => {
     const data = await response.json();
     setRecipes(data.hits);
     console.log(data.hits);
+
+    let accordeon = document.querySelectorAll('.accordeon');
+    for (let i = 0; i < accordeon.length; i++) {
+      accordeon[i].addEventListener("click", function() {
+        accordeon[i].nextElementSibling.classList.toggle("active");
+      });
+    }
   };
 
   const updateSearch = e => {
@@ -48,7 +55,6 @@ const App = () => {
           <Recipe 
             key={recipe.recipe.url} 
             title={recipe.recipe.label} 
-            calories={recipe.recipe.calories} 
             image={recipe.recipe.image} 
             ingredients={recipe.recipe.ingredients} 
           />
